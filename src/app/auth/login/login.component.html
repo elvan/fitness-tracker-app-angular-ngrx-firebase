@@ -2,6 +2,7 @@
   <!-- Login Form (Reactive) -->
   <form
     [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()"
     fxLayout="column"
     fxLayoutAlign="center center"
     fxLayoutGap="1.5rem"
