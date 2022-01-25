@@ -9,24 +9,58 @@
     <mat-form-field appearance="fill">
       <mat-label>Email</mat-label>
       <input
+        #emailInput="ngModel"
         ngModel
         matInput
         name="email"
         type="email"
         placeholder="Your email"
+        required
+        minlength="4"
+        maxlength="64"
       />
+      <mat-hint>
+        <span>A valid email address.</span>
+      </mat-hint>
+      <mat-error *ngIf="emailInput.errors">
+        <span *ngIf="emailInput.errors?.required">Email is required.</span>
+        <span *ngIf="emailInput.errors?.minlength">
+          Email must be at least 4 characters long.
+        </span>
+        <span *ngIf="emailInput.errors?.maxlength">
+          Email cannot be more than 64 characters long.
+        </span>
+      </mat-error>
     </mat-form-field>
 
     <!-- Password -->
     <mat-form-field appearance="fill">
       <mat-label>Password</mat-label>
       <input
+        #passwordInput="ngModel"
         ngModel
         matInput
         name="password"
         type="password"
         placeholder="Your password"
+        required
+        minlength="8"
+        maxlength="64"
       />
+      <mat-hint>
+        <span>At least 8 characters long.</span>
+      </mat-hint>
+      <mat-error *ngIf="passwordInput.errors">
+        <span *ngIf="passwordInput.errors?.required">
+          Password is required.
+        </span>
+        <span *ngIf="passwordInput.errors?.minlength">
+          Password must be at least 8 characters long.
+        </span>
+        <span *ngIf="passwordInput.errors?.maxlength">
+          Password cannot be more than 64 characters long.
+        </span>
+      </mat-error>
     </mat-form-field>
 
     <!-- Button -->
