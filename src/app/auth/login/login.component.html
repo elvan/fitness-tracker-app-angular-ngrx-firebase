@@ -1,1 +1,55 @@
-<p>login works!</p>
+<section>
+  <!-- Login Form (Reactive) -->
+  <form
+    [formGroup]="loginForm"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="1.5rem"
+  >
+    <!-- Email -->
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input
+        formControlName="email"
+        matInput
+        name="email"
+        type="email"
+        placeholder="Your email"
+      />
+      <mat-hint>
+        <span>Must be a valid email address.</span>
+      </mat-hint>
+      <mat-error>
+        <span>Email is required.</span>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Password -->
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input
+        formControlName="password"
+        matInput
+        name="password"
+        type="password"
+        placeholder="Your password"
+      />
+      <mat-hint>
+        <span>Must be at least 8 characters long.</span>
+      </mat-hint>
+      <mat-error>
+        <span>Password is required.</span>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Button -->
+    <button
+      [disabled]="loginForm.invalid"
+      mat-raised-button
+      color="accent"
+      type="submit"
+    >
+      Login
+    </button>
+  </form>
+</section>
