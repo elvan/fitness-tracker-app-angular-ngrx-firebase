@@ -20,7 +20,7 @@
         maxlength="64"
       />
       <mat-hint>
-        <span>A valid email address.</span>
+        <span>Must be a valid email address.</span>
       </mat-hint>
       <mat-error *ngIf="emailInput.errors">
         <span *ngIf="emailInput.errors?.required">Email is required.</span>
@@ -48,7 +48,7 @@
         maxlength="64"
       />
       <mat-hint>
-        <span>At least 8 characters long.</span>
+        <span>Must be at least 8 characters long.</span>
       </mat-hint>
       <mat-error *ngIf="passwordInput.errors">
         <span *ngIf="passwordInput.errors?.required">
@@ -61,6 +61,24 @@
           Password cannot be more than 64 characters long.
         </span>
       </mat-error>
+    </mat-form-field>
+
+    <!-- Datepicker -->
+    <mat-form-field appearance="fill">
+      <input
+        [matDatepicker]="datepicker"
+        matInput
+        placeholder="Your birthdate"
+        name="birthdate"
+      />
+      <mat-datepicker-toggle
+        matSuffix
+        [for]="datepicker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #datepicker></mat-datepicker>
+      <mat-hint>
+        <span>You must be at least 18 years old to use this app.</span>
+      </mat-hint>
     </mat-form-field>
 
     <!-- Button -->
