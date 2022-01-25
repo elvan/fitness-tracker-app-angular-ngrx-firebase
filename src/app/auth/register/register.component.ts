@@ -7,9 +7,13 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
+  maxDate = new Date();
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.maxDate.setFullYear(this.maxDate.getFullYear() - 18);
+  }
 
   onSubmit(registerForm: NgForm): void {
     console.log(registerForm.value);
