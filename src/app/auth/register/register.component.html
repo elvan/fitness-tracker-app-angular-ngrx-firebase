@@ -4,6 +4,7 @@
     (ngSubmit)="onSubmit(registerForm)"
     fxLayout="column"
     fxLayoutAlign="center center"
+    fxLayoutGap="1.5rem"
   >
     <!-- Email -->
     <mat-form-field appearance="fill">
@@ -72,6 +73,7 @@
         matInput
         name="birthdate"
         placeholder="Your birthdate"
+        required
       />
       <mat-datepicker-toggle
         matSuffix
@@ -104,6 +106,13 @@
     -->
 
     <!-- Button -->
-    <button mat-raised-button color="accent" type="submit">Register</button>
+    <button
+      [disabled]="registerForm.invalid"
+      mat-raised-button
+      color="accent"
+      type="submit"
+    >
+      Register
+    </button>
   </form>
 </section>
