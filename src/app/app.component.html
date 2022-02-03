@@ -3,7 +3,19 @@
     <p>SIDEBAR</p>
   </mat-sidenav>
   <mat-sidenav-content>
-    <button (click)="sidenav.toggle()">Toggle Sidenav</button>
-    <router-outlet></router-outlet>
+    <mat-toolbar color="primary">
+      <div>
+        <button (click)="sidenav.toggle()">Toggle Sidenav</button>
+      </div>
+      <div>FitnessTracker</div>
+      <div>
+        <a routerLink="/logout">Logout</a>
+        <a routerLink="/login">Login</a>
+        <a routerLink="/register">Register</a>
+      </div>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
   </mat-sidenav-content>
 </mat-sidenav-container>
