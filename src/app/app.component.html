@@ -5,13 +5,25 @@
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <div>
-        <button (click)="sidenav.toggle()">Toggle Sidenav</button>
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
       </div>
-      <div>FitnessTracker</div>
       <div>
-        <a routerLink="/logout">Logout</a>
-        <a routerLink="/login">Login</a>
-        <a routerLink="/register">Register</a>
+        <a routerLink="/">FitnessTracker</a>
+      </div>
+      <div fxFlex fxLayout fxLayoutAlign="flex-end">
+        <ul fxLayout fxLayoutGap="8px" class="nav-items">
+          <li>
+            <a routerLink="/logout">Logout</a>
+          </li>
+          <li>
+            <a routerLink="/login">Login</a>
+          </li>
+          <li>
+            <a routerLink="/register">Register</a>
+          </li>
+        </ul>
       </div>
     </mat-toolbar>
     <main>
