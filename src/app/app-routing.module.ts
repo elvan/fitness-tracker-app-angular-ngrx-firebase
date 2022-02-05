@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { WelcomeComponent } from './home/welcome/welcome.component';
+import { HomeComponent } from './home/home.component';
 import { CreateTrainingComponent } from './training/create-training/create-training.component';
 import { CurrentTrainingComponent } from './training/current-training/current-training.component';
 import { PreviousTrainingComponent } from './training/previous-training/previous-training.component';
-import { TrainingComponent } from './training/training/training.component';
+import { TrainingComponent } from './training/training.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: WelcomeComponent,
+    component: HomeComponent,
     pathMatch: 'full',
   },
   {

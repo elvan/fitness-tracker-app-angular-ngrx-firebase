@@ -3,16 +3,18 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './app-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { WelcomeComponent } from './home/welcome/welcome.component';
-import { MaterialModule } from './material.module';
+import { HomeComponent } from './home/home.component';
 import { CreateTrainingComponent } from './training/create-training/create-training.component';
 import { CurrentTrainingComponent } from './training/current-training/current-training.component';
 import { PreviousTrainingComponent } from './training/previous-training/previous-training.component';
-import { TrainingComponent } from './training/training/training.component';
+import { TrainingComponent } from './training/training.component';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { TrainingComponent } from './training/training/training.component';
     CurrentTrainingComponent,
     CreateTrainingComponent,
     PreviousTrainingComponent,
-    WelcomeComponent,
+    HomeComponent,
+    HeaderComponent,
+    SidenavListComponent,
   ],
   imports: [
     BrowserModule,
