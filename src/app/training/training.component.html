@@ -10,5 +10,7 @@
 </ng-container>
 
 <ng-template #starting>
-  <app-current-training></app-current-training>
+  <app-current-training
+    (trainingExit)="inProgress = false"
+  ></app-current-training>
 </ng-template>
