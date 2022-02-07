@@ -1,9 +1,25 @@
 <section class="new-training" fxLayout fxLayoutAlign="center center">
   <mat-card fxFlex="480px">
-    <mat-card-title>Time to Start an Exercise!</mat-card-title>
-    <mat-card-content> Select type of exercise: </mat-card-content>
-    <mat-card-actions>
-      <button type="submit" mat-button>Start</button>
+    <mat-card-title fxLayoutAlign="center">
+      <h3>Time to Start an Exercise!</h3>
+    </mat-card-title>
+    <mat-card-content fxLayoutAlign="center">
+      <mat-select placeholder="Start new exercies">
+        <mat-option></mat-option>
+        <mat-option value="1">Lunges</mat-option>
+        <mat-option value="1">Pushups</mat-option>
+        <mat-option value="1">Squats</mat-option>
+        <mat-option value="1">Deadlifts</mat-option>
+        <mat-option value="1">Burpees</mat-option>
+        <mat-option value="1">Planks</mat-option>
+        <mat-option value="1">Skipping</mat-option>
+        <mat-option value="1">Jumping</mat-option>
+        <mat-option value="1">Dumbbells</mat-option>
+        <mat-option value="1">Stairs</mat-option>
+      </mat-select>
+    </mat-card-content>
+    <mat-card-actions fxLayoutAlign="center">
+      <button mat-button type="submit" color="primary">Start Training</button>
     </mat-card-actions>
   </mat-card>
 </section>

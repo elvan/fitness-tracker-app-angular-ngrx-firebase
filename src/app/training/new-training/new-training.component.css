@@ -1,0 +1,11 @@
+section {
+  margin-top: 1rem;
+}
+
+mat-card-content {
+  padding: 0 1rem;
+}
+
+.new-training {
+  padding: 32px;
+}

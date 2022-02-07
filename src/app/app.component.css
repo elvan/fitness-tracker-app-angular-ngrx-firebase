@@ -7,3 +7,7 @@ mat-sidenav {
 mat-sidenav {
   width: 240px;
 }
+
+main {
+  padding: 2rem;
+}
