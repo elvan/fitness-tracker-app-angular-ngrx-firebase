@@ -19,6 +19,7 @@ const modules = [
   MatCardModule,
   MatCheckboxModule,
   MatDatepickerModule,
+  MatToolbarModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
