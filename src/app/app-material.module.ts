@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 const modules = [
@@ -20,6 +21,7 @@ const modules = [
   MatListModule,
   MatNativeDateModule,
   MatSidenavModule,
+  MatTabsModule,
   MatToolbarModule,
 ];
 

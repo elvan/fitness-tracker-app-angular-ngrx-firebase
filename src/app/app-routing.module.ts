@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { HomeComponent } from './home/home.component';
-import { CreateTrainingComponent } from './training/create-training/create-training.component';
 import { CurrentTrainingComponent } from './training/current-training/current-training.component';
-import { PreviousTrainingComponent } from './training/previous-training/previous-training.component';
+import { NewTrainingComponent } from './training/new-training/new-training.component';
+import { PastTrainingComponent } from './training/past-training/past-training.component';
 import { TrainingComponent } from './training/training.component';
 
 const routes: Routes = [
@@ -23,12 +23,12 @@ const routes: Routes = [
     component: CurrentTrainingComponent,
   },
   {
-    path: 'create-training',
-    component: CreateTrainingComponent,
+    path: 'new-training',
+    component: NewTrainingComponent,
   },
   {
     path: 'previous-training',
-    component: PreviousTrainingComponent,
+    component: PastTrainingComponent,
   },
   {
     path: 'register',
