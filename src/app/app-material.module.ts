@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -13,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 const modules = [
   MatButtonModule,
+  MatCardModule,
   MatCheckboxModule,
   MatDatepickerModule,
   MatFormFieldModule,
