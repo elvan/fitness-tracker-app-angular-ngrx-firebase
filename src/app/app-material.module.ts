@@ -4,6 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -19,6 +20,7 @@ const modules = [
   MatCardModule,
   MatCheckboxModule,
   MatDatepickerModule,
+  MatDialogModule,
   MatToolbarModule,
   MatFormFieldModule,
   MatIconModule,
@@ -36,4 +38,4 @@ const modules = [
   imports: modules,
   exports: modules,
 })
-export class MaterialModule {}
+export class AppMaterialModule {}
