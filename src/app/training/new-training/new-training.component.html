@@ -19,7 +19,14 @@
       </mat-select>
     </mat-card-content>
     <mat-card-actions fxLayoutAlign="center">
-      <button mat-button type="submit" color="primary">Start Training</button>
+      <button
+        mat-button
+        type="submit"
+        color="primary"
+        (click)="startTraining()"
+      >
+        Start Training
+      </button>
     </mat-card-actions>
   </mat-card>
 </section>

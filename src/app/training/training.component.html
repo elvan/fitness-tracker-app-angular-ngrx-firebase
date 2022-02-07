@@ -1,8 +1,14 @@
-<mat-tab-group>
-  <mat-tab label="New Exercise">
-    <app-new-training></app-new-training>
-  </mat-tab>
-  <mat-tab label="Past Exercise">
-    <app-past-training></app-past-training>
-  </mat-tab>
-</mat-tab-group>
+<ng-container *ngIf="!inProgress; else starting">
+  <mat-tab-group>
+    <mat-tab label="New Exercise">
+      <app-new-training (trainingStart)="inProgress = true"></app-new-training>
+    </mat-tab>
+    <mat-tab label="Past Exercise">
+      <app-past-training></app-past-training>
+    </mat-tab>
+  </mat-tab-group>
+</ng-container>
+
+<ng-template #starting>
+  <app-current-training></app-current-training>
+</ng-template>
