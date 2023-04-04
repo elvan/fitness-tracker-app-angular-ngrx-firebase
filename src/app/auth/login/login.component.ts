@@ -4,7 +4,6 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
 import * as fromRoot from '../../app.reducer';
-import { UIService } from '../../shared/ui.service';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -18,17 +17,11 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private uiService: UIService,
     private store: Store<fromRoot.State>
   ) {}
 
   ngOnInit() {
     this.isLoading$ = this.store.select(fromRoot.getIsLoading);
-    // this.loadingSubs = this.uiService.loadingStateChanged.subscribe(
-    //   isLoading => {
-    //     this.isLoading = isLoading;
-    //   }
-    // );
     this.loginForm = new FormGroup({
       email: new FormControl('', {
         validators: [Validators.required, Validators.email],
@@ -43,10 +36,4 @@ export class LoginComponent implements OnInit {
       password: this.loginForm.value.password,
     });
   }
-
-  // ngOnDestroy() {
-  //   if (this.loadingSubs) {
-  //     this.loadingSubs.unsubscribe();
-  //   }
-  // }
 }
