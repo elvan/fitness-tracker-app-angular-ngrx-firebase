@@ -11,7 +11,7 @@ import { StopTrainingComponent } from './stop-training.component';
 })
 export class CurrentTrainingComponent implements OnInit {
   progress = 0;
-  timer: any;
+  timer: number;
 
   constructor(
     private dialog: MatDialog,
